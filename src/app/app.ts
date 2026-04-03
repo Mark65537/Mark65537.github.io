@@ -1,14 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 import { Footer } from './shared/footer/footer';
+import { Home } from './pages/home/home';
 
 @Component({
   selector: 'app-root',
-  imports: [Footer],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [Home, Footer],
+  template: `
+    <app-home />
+    <app-footer />
+  `,
 })
-export class App {
-  
-}
+export class App {}
